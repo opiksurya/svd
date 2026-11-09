@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { assetUrl } from '../utils/assetUrl';
+import { MagneticButton } from './reactbits';
 
 export default function SectionScrollVideo({
   onNextClick,
@@ -120,10 +121,10 @@ export default function SectionScrollVideo({
             </p>
 
             <div className="action-group" style={{ marginBottom: '1.5rem' }}>
-              <button className="btn-primary" onClick={onOpenInquiryModal}>
+              <MagneticButton className="btn-primary" onClick={onOpenInquiryModal} strength={0.22}>
                 <span>Start a Collaboration</span>
                 <ArrowRight size={16} />
-              </button>
+              </MagneticButton>
             </div>
 
             <div

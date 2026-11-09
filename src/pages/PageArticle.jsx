@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { assetUrl } from '../utils/assetUrl';
+import { SpotlightCard, ShinyText, MagneticButton } from '../components/reactbits';
 import { 
   ArrowUpRight, 
   ArrowLeft, 
@@ -511,7 +512,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
               <span className="clean-label-muted">FEATURED ESSAY OF THE MONTH</span>
             </div>
 
-            <div
+            <SpotlightCard
               className="article-spotlight-card"
               onClick={() => handleOpenArticle(featuredArticle.id)}
             >
@@ -567,7 +568,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
                   </span>
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           </div>
         </section>
       )}
@@ -598,7 +599,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
 
             <div className="article-tri-grid">
               {popularArticles.slice(0, 3).map((art) => (
-                <div
+                <SpotlightCard
                   key={art.id}
                   className="article-visual-card sheet-white"
                   onClick={() => handleOpenArticle(art.id)}
@@ -637,7 +638,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
                       </span>
                     </div>
                   </div>
-                </div>
+                </SpotlightCard>
               ))}
             </div>
           </div>

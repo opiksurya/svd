@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { ShinyText, MagneticButton } from './reactbits';
 
 export default function SectionPillars({ onNextClick, onOpenInquiryModal }) {
   return (
@@ -10,11 +11,11 @@ export default function SectionPillars({ onNextClick, onOpenInquiryModal }) {
           <div className="split-flank-left">
             <div className="section-tag">
               <span className="section-tag-dot"></span>
-              <span>02 — Football Legacy</span>
+              <ShinyText text="02 — Football Legacy" speed={4} />
             </div>
 
             <h2 className="section-headline">
-              More Than a Career. A Journey of <span className="highlight">Evolution</span>.
+              More Than a Career. A Journey of <span className="highlight"><ShinyText text="Evolution" speed={3} /></span>.
             </h2>
 
             <p className="section-subtext">
@@ -24,10 +25,10 @@ export default function SectionPillars({ onNextClick, onOpenInquiryModal }) {
             </p>
 
             <div className="action-group" style={{ marginTop: '0.5rem' }}>
-              <button className="btn-primary" onClick={() => onNextClick('section-3')}>
+              <MagneticButton className="btn-primary" onClick={() => onNextClick('section-3')} strength={0.2}>
                 <span>Business &amp; Ventures</span>
                 <ArrowRight size={16} />
-              </button>
+              </MagneticButton>
             </div>
           </div>
 
@@ -81,11 +82,11 @@ export default function SectionPillars({ onNextClick, onOpenInquiryModal }) {
           <div className="split-flank-left">
             <div className="section-tag">
               <span className="section-tag-dot"></span>
-              <span>03 — Business &amp; Venture Portfolio</span>
+              <ShinyText text="03 — Business & Venture Portfolio" speed={4} />
             </div>
 
             <h2 className="section-headline">
-              Building Beyond <span className="highlight">the Game</span>.
+              Building Beyond <span className="highlight"><ShinyText text="the Game" speed={3} /></span>.
             </h2>
 
             <p className="section-subtext">
@@ -95,10 +96,10 @@ export default function SectionPillars({ onNextClick, onOpenInquiryModal }) {
             </p>
 
             <div className="action-group">
-              <button className="btn-primary" onClick={onOpenInquiryModal}>
+              <MagneticButton className="btn-primary" onClick={onOpenInquiryModal} strength={0.22}>
                 <span>Partnership Inquiry</span>
                 <ArrowRight size={16} />
-              </button>
+              </MagneticButton>
               <button className="btn-secondary" onClick={() => onNextClick('section-values')}>
                 <span>Explore Brand Values</span>
               </button>

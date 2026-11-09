@@ -1,4 +1,5 @@
 import { ArrowUp, ArrowUpRight, Send } from 'lucide-react';
+import { ShinyText, MagneticButton } from './reactbits';
 
 export default function SectionContact({ onOpenInquiryModal, onScrollToTop }) {
   return (
@@ -13,7 +14,7 @@ export default function SectionContact({ onOpenInquiryModal, onScrollToTop }) {
           {/* LEFT COLUMN: Headline, Subtitle & Action */}
           <div>
             <h2 className="section-headline">
-              Let&apos;s Build <span className="highlight">What&apos;s Next</span>.
+              Let&apos;s Build <span className="highlight"><ShinyText text="What's Next" speed={3} /></span>.
             </h2>
 
             <p className="section-subtext">
@@ -22,10 +23,10 @@ export default function SectionContact({ onOpenInquiryModal, onScrollToTop }) {
             </p>
 
             <div className="action-group">
-              <button className="btn-primary" onClick={onOpenInquiryModal}>
+              <MagneticButton className="btn-primary" onClick={onOpenInquiryModal} strength={0.22}>
                 <span>GET IN TOUCH</span>
                 <Send size={15} />
-              </button>
+              </MagneticButton>
 
               <button className="btn-secondary" onClick={onScrollToTop} title="Back to Top">
                 <span>Back to Top</span>

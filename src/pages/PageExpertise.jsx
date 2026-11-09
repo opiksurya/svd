@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CountUp, SpotlightCard, ShinyText, MagneticButton } from '../components/reactbits';
 import { 
   ArrowUpRight, 
   ArrowRight, 
@@ -248,19 +249,19 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
           {/* Quick Metrics Header Bar */}
           <div className="expertise-hero-metrics-bar sheet-white">
             <div className="expertise-hero-metric-item">
-              <span className="expertise-metric-num">50+</span>
+              <span className="expertise-metric-num"><CountUp to="50+" duration={1.6} /></span>
               <span className="expertise-metric-lbl">Vetted Software Developers</span>
             </div>
             <div className="expertise-hero-metric-item">
-              <span className="expertise-metric-num">6,500+</span>
+              <span className="expertise-metric-num"><CountUp to="6,500+" duration={2} /></span>
               <span className="expertise-metric-lbl">Global Workspace Hubs</span>
             </div>
             <div className="expertise-hero-metric-item">
-              <span className="expertise-metric-num">8 Active</span>
+              <span className="expertise-metric-num"><CountUp to={8} suffix=" Active" duration={1.4} /></span>
               <span className="expertise-metric-lbl">Interconnected Ventures</span>
             </div>
             <div className="expertise-hero-metric-item">
-              <span className="expertise-metric-num">3 Regions</span>
+              <span className="expertise-metric-num"><CountUp to={3} suffix=" Regions" duration={1.2} /></span>
               <span className="expertise-metric-lbl">Europe · Australia · Indonesia</span>
             </div>
           </div>
@@ -321,10 +322,10 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
               {/* 4 Key Metrics Grid */}
               <div className="expertise-stats-pills-grid">
                 {activeItem.metrics.map((m, idx) => (
-                  <div key={idx} className="expertise-stat-pill-card sheet-white">
+                  <SpotlightCard key={idx} className="expertise-stat-pill-card sheet-white">
                     <span className="expertise-pill-val">{m.val}</span>
                     <span className="expertise-pill-lbl">{m.label}</span>
-                  </div>
+                  </SpotlightCard>
                 ))}
               </div>
 
@@ -343,7 +344,7 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
 
               <div className="expertise-offerings-grid">
                 {activeItem.coreOfferings.map((offering, idx) => (
-                  <div key={idx} className="expertise-offering-item sheet-white">
+                  <SpotlightCard key={idx} className="expertise-offering-item sheet-white">
                     <div className="expertise-offering-check">
                       <CheckCircle2 size={16} style={{ color: '#0064C2' }} />
                     </div>
@@ -351,7 +352,7 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
                       <h5>{offering.title}</h5>
                       <p>{offering.desc}</p>
                     </div>
-                  </div>
+                  </SpotlightCard>
                 ))}
               </div>
 
@@ -408,7 +409,7 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
           {/* 4 Step Methodology Cards */}
           <div className="expertise-methodology-grid">
             {WORKING_METHODOLOGY.map((m, idx) => (
-              <div key={idx} className="expertise-methodology-card sheet-white">
+              <SpotlightCard key={idx} className="expertise-methodology-card sheet-white">
                 <div className="expertise-method-top">
                   <span className="expertise-method-step">{m.step}</span>
                   <span className="expertise-method-num">0{idx + 1}</span>
@@ -419,7 +420,7 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
                   <span className="expertise-method-deliverable-lbl">Deliverable:</span>
                   <span className="expertise-method-deliverable-val">{m.deliverable}</span>
                 </div>
-              </div>
+              </SpotlightCard>
             ))}
           </div>
 
@@ -430,10 +431,10 @@ export default function PageExpertise({ onSelectPage, onOpenInquiryModal }) {
               <h3>Need a dedicated tech team, AI architecture, or international market access?</h3>
               <p>Let&apos;s schedule an executive intake call to examine your requirements.</p>
             </div>
-            <button className="btn-primary" onClick={onOpenInquiryModal}>
+            <MagneticButton className="btn-primary" onClick={onOpenInquiryModal} strength={0.2}>
               <span>Start an Executive Inquiry</span>
               <ArrowUpRight size={16} />
-            </button>
+            </MagneticButton>
           </div>
         </div>
       </section>

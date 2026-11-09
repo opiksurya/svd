@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { X, Send, CheckCircle2 } from 'lucide-react';
+import { MagneticButton } from './reactbits';
 
 export default function InquiryModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -99,14 +100,15 @@ export default function InquiryModal({ isOpen, onClose }) {
               ></textarea>
             </div>
 
-            <button 
+            <MagneticButton 
               type="submit" 
               className="btn-primary" 
               style={{ width: '100%', justifyContent: 'center', marginTop: '1rem' }}
+              strength={0.15}
             >
               <span>GET IN TOUCH</span>
               <Send size={15} />
-            </button>
+            </MagneticButton>
           </form>
         )}
       </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { assetUrl } from '../utils/assetUrl';
+import { MagneticButton } from './reactbits';
 import {
   Globe,
   Check,
@@ -335,10 +336,10 @@ export default function Navbar({
             {isDarkTheme ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
-          <button className="navbar-cta-btn" onClick={onOpenInquiryModal}>
+          <MagneticButton className="navbar-cta-btn" onClick={onOpenInquiryModal} strength={0.22}>
             <span>{t.cta}</span>
             <ArrowRight size={15} />
-          </button>
+          </MagneticButton>
 
           <button
             className="navbar-icon-btn navbar-mobile-toggle"

@@ -1,4 +1,5 @@
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ShinyText, MagneticButton, DecryptedText } from './reactbits';
 
 export default function SectionHero({ onExploreClick, onConsultClick }) {
   return (
@@ -8,11 +9,11 @@ export default function SectionHero({ onExploreClick, onConsultClick }) {
         <div className="split-flank-left">
           <div className="section-tag">
             <span className="section-tag-dot"></span>
-            <span>A Global Journey of Sport, Business &amp; Opportunity</span>
+            <ShinyText text="A Global Journey of Sport, Business & Opportunity" speed={3.5} />
           </div>
 
           <h1 className="section-headline">
-            BEYOND <span className="highlight">FOOTBALL.</span>
+            BEYOND <span className="highlight"><ShinyText text="FOOTBALL." speed={3} /></span>
             <br />
             BEYOND BORDERS.
           </h1>
@@ -36,26 +37,32 @@ export default function SectionHero({ onExploreClick, onConsultClick }) {
         <div className="split-flank-right">
           <div className="metrics-stack">
             <div className="metric-line">
-              <div className="metric-num">Former Professional Footballer</div>
+              <div className="metric-num">
+                <DecryptedText text="Former Professional Footballer" animateOn="hover" />
+              </div>
               <div className="metric-desc">Europe · Australia · Indonesia</div>
             </div>
 
             <div className="metric-line">
-              <div className="metric-num">Multi-Venture Entrepreneur</div>
+              <div className="metric-num">
+                <DecryptedText text="Multi-Venture Entrepreneur" animateOn="hover" />
+              </div>
               <div className="metric-desc">AI · Software · PropTech · Digital Commerce</div>
             </div>
 
             <div className="metric-line">
-              <div className="metric-num">Global Connector</div>
+              <div className="metric-num">
+                <DecryptedText text="Global Connector" animateOn="hover" />
+              </div>
               <div className="metric-desc">8 Ventures Across Europe &amp; Asia-Pacific</div>
             </div>
           </div>
 
           <div className="action-group">
-            <button className="btn-primary" onClick={onConsultClick}>
+            <MagneticButton className="btn-primary" onClick={onConsultClick} strength={0.24}>
               <span>Get In Touch</span>
               <ArrowRight size={16} />
-            </button>
+            </MagneticButton>
 
             <button className="btn-secondary" onClick={onExploreClick}>
               <span>Explore the Journey</span>

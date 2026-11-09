@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { assetUrl } from '../utils/assetUrl';
+import { CountUp, SpotlightCard, ShinyText, MagneticButton } from '../components/reactbits';
 import { 
   ArrowUpRight, 
   ArrowRight, 
@@ -10,9 +11,9 @@ import {
   CheckCircle2, 
   Layers, 
   Flame, 
-  Sparkles,
-  MapPin,
-  Compass
+  Sparkles, 
+  MapPin, 
+  Compass 
 } from 'lucide-react';
 
 const CAREER_STATS = [
@@ -220,11 +221,13 @@ export default function PageAbout({ onSelectPage, onOpenInquiryModal }) {
         <div className="sheet-inner-container">
           <div className="about-stats-grid">
             {CAREER_STATS.map((stat, idx) => (
-              <div key={idx} className="about-stat-card sheet-warm-gray">
-                <span className="about-stat-val">{stat.value}</span>
+              <SpotlightCard key={idx} className="about-stat-card sheet-warm-gray">
+                <span className="about-stat-val">
+                  <CountUp to={stat.value} duration={1.8} />
+                </span>
                 <span className="about-stat-label">{stat.label}</span>
                 <span className="about-stat-meta">{stat.meta}</span>
-              </div>
+              </SpotlightCard>
             ))}
           </div>
         </div>
@@ -321,7 +324,7 @@ export default function PageAbout({ onSelectPage, onOpenInquiryModal }) {
           {/* 8-Venture Interactive Cards Grid */}
           <div className="about-ventures-grid">
             {VENTURE_PORTFOLIO_CARDS.map((v) => (
-              <div
+              <SpotlightCard
                 key={v.id}
                 className="about-venture-card sheet-warm-gray"
                 onClick={() => onSelectPage('projects')}
@@ -343,7 +346,7 @@ export default function PageAbout({ onSelectPage, onOpenInquiryModal }) {
                     <ArrowUpRight size={14} />
                   </span>
                 </div>
-              </div>
+              </SpotlightCard>
             ))}
           </div>
         </div>
