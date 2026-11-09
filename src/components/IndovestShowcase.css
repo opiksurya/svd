@@ -1,0 +1,572 @@
+/* ==========================================================================
+   SCOPED INDOVEST.LIMESIGHT.NL UI/UX DESIGN SYSTEM (ONLY ACTIVE ON INDOVEST)
+   ========================================================================== */
+
+.indovest-showcase-root {
+  --iv-primary: #bf124d;
+  --iv-burgundy: #990e3d;
+  --iv-burgundy-dark: #7c0d33;
+  --iv-indigo: #2e2e85;
+  --iv-peach: #ffbc7d;
+  --iv-bg-light: #f2f2f2;
+  --iv-white: #ffffff;
+  --iv-text-dark: #000000;
+  --iv-text-muted: #555555;
+  --iv-font: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  background-color: var(--iv-white);
+  color: var(--iv-text-dark);
+  font-family: var(--iv-font);
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.iv-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 1. INDOVEST INTERNAL NAVBAR */
+.iv-navbar {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.iv-navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.iv-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.iv-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.iv-nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #222222;
+  transition: color 0.2s ease;
+}
+
+.iv-nav-link:hover,
+.iv-nav-link.active {
+  color: var(--iv-primary);
+  font-weight: 600;
+}
+
+.iv-btn-primary {
+  background-color: var(--iv-primary);
+  color: #ffffff;
+  font-family: var(--iv-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 24px rgba(191, 18, 77, 0.24);
+  transition: all 0.22s ease;
+}
+
+.iv-btn-primary:hover {
+  background-color: var(--iv-burgundy-dark);
+  transform: translateY(-2px);
+}
+
+/* 2. HERO SECTION (BALI VILLA BACKGROUND + FLOATING SPOTLIGHT CARDS) */
+.iv-hero {
+  position: relative;
+  min-height: 620px;
+  background-image:
+    linear-gradient(90deg, rgba(15, 10, 28, 0.82) 0%, rgba(15, 10, 28, 0.58) 55%, rgba(15, 10, 28, 0.35) 100%),
+    url('https://indovest.limesight.nl/wp-content/uploads/2026/04/d5ae8145800bb3144edb9d0f842d4c796b17b2bf-1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 5.5rem 0;
+  color: #ffffff;
+}
+
+.iv-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.iv-hero-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--iv-peach);
+  margin-bottom: 1rem;
+}
+
+.iv-hero h1 {
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.24;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.iv-hero-Highlight-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.iv-mini-villa-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  color: #111111;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+  transition: transform 0.25s ease;
+}
+
+.iv-mini-villa-card:hover {
+  transform: translateY(-4px);
+}
+
+.iv-mini-villa-card img {
+  width: 92px;
+  height: 92px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.iv-mini-villa-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  color: #111111;
+}
+
+.iv-mini-villa-info p {
+  font-size: 0.85rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+}
+
+.iv-badge-sold {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background-color: var(--iv-burgundy);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.iv-badge-limited {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background-color: var(--iv-peach);
+  color: #4a2100;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* 3. WHY INDOVEST GROUP SECTION */
+.iv-why-section {
+  padding: 6rem 0;
+  background-color: var(--iv-bg-light);
+}
+
+.iv-why-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.iv-section-title {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--iv-indigo);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.iv-section-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--iv-text-muted);
+}
+
+.iv-why-banner-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(46, 46, 133, 0.12);
+}
+
+.iv-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.iv-pillar-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid var(--iv-primary);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.iv-pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(191, 18, 77, 0.1);
+}
+
+.iv-pillar-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(191, 18, 77, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.iv-pillar-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.iv-pillar-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.iv-pillar-card p {
+  font-size: 0.9rem;
+  line-height: 1.68;
+  color: var(--iv-text-muted);
+}
+
+/* 4. EXCLUSIVE PROPERTY INVESTMENTS (4 AUTHENTIC LISTINGS) */
+.iv-properties-section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.iv-properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.iv-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.iv-filter-pill {
+  padding: 0.55rem 1.25rem;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid #dddddd;
+  color: #444444;
+  transition: all 0.2s ease;
+}
+
+.iv-filter-pill.active,
+.iv-filter-pill:hover {
+  background-color: var(--iv-primary);
+  color: #ffffff;
+  border-color: var(--iv-primary);
+}
+
+.iv-property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+.iv-property-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.iv-property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.11);
+}
+
+.iv-property-img-wrap {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+
+.iv-property-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.iv-property-card:hover .iv-property-img-wrap img {
+  transform: scale(1.05);
+}
+
+.iv-property-price-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  background: var(--iv-burgundy);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+}
+
+.iv-property-status-tag {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.iv-property-status-tag.available {
+  background: #00d084;
+  color: #003822;
+}
+
+.iv-property-status-tag.sold {
+  background: var(--iv-burgundy-dark);
+  color: #ffffff;
+}
+
+.iv-property-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.iv-property-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.iv-spec-chip {
+  background: var(--iv-bg-light);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.iv-property-body h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--iv-indigo);
+  margin-bottom: 0.6rem;
+}
+
+.iv-property-body p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--iv-text-muted);
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+/* 5. INDONESIA'S RISING TOURISM ECONOMY */
+.iv-tourism-section {
+  padding: 6rem 0;
+  background-color: var(--iv-bg-light);
+}
+
+.iv-tourism-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.iv-tourism-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.iv-tourism-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+}
+
+.iv-tourism-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.iv-tourism-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--iv-burgundy);
+  margin-bottom: 0.75rem;
+}
+
+.iv-tourism-content p {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--iv-text-muted);
+}
+
+/* 6. "YOUR FUTURE STARTS HERE" CONSULTATION CTA */
+.iv-future-section {
+  position: relative;
+  padding: 6rem 0;
+  background-image:
+    linear-gradient(135deg, rgba(124, 13, 51, 0.92) 0%, rgba(46, 46, 133, 0.88) 100%),
+    url('https://indovest.limesight.nl/wp-content/uploads/2026/04/ebee1d0fe49cd072fbd3e4cec4beef7857345604-1.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.iv-future-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.iv-future-form {
+  background: #ffffff;
+  color: #111111;
+  padding: 2.25rem;
+  border-radius: 18px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+}
+
+.iv-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  font-family: var(--iv-font);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* 7. INDOVEST SCOPED FOOTER */
+.iv-footer {
+  background-color: #1b1b3a;
+  color: #ffffff;
+  padding: 4.5rem 0 2.5rem;
+}
+
+.iv-footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.iv-footer-col h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--iv-peach);
+  margin-bottom: 1rem;
+}
+
+.iv-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.iv-footer-col li {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 1024px) {
+  .iv-hero-grid,
+  .iv-why-top-grid,
+  .iv-pillars-grid,
+  .iv-property-grid,
+  .iv-tourism-grid,
+  .iv-tourism-card,
+  .iv-future-grid,
+  .iv-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .iv-nav-links {
+    display: none;
+  }
+}
+

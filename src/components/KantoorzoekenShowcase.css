@@ -1,0 +1,878 @@
+/* ==========================================================================
+   SCOPED KANTOORZOEKEN SHOWCASE UI/UX
+   Exact match to https://oliemuller.nl/projects/kantoorzoeken/
+   Colors:
+   - Deep Teal Hero & CTA: #1B2F32 / #1A2B2D
+   - Muted Slate-Teal Stats Bar & Buttons: #52696C
+   - Vibrant Orange Accent: #FF650D
+   - Soft Mint/Ice Surface: #F0F5F5 / #C8D9DA
+   - Pure White Surface: #FFFFFF
+   - Dark Slate Text: #1A1A2E / #1B2F32
+   ========================================================================== */
+
+.kantoorzoeken-showcase-root {
+  --kz-teal-dark: #1B2F32;
+  --kz-teal-darker: #1A2B2D;
+  --kz-teal-slate: #52696C;
+  --kz-teal-pill-bg: rgba(82, 105, 108, 0.35);
+  --kz-teal-pill-border: rgba(82, 105, 108, 0.5);
+  --kz-orange: #FF650D;
+  --kz-mint-bg: #F0F5F5;
+  --kz-mint-border: #C8D9DA;
+  --kz-white: #FFFFFF;
+  --kz-slate-dark: #1A1A2E;
+  --kz-slate-muted: #64748B;
+  --kz-border-subtle: #E2E8F0;
+
+  background-color: var(--kz-white);
+  color: var(--kz-slate-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+.kz-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 1. HERO SECTION (#1B2F32) */
+.kz-hero {
+  background-color: var(--kz-teal-dark);
+  color: var(--kz-white);
+  padding: 80px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kz-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.kz-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.kz-breadcrumb-link {
+  color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.kz-breadcrumb-link:hover {
+  color: var(--kz-white);
+}
+
+.kz-breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.kz-breadcrumb-current {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.kz-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--kz-teal-pill-bg);
+  border: 1px solid var(--kz-teal-pill-border);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 24px;
+}
+
+.kz-hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--kz-orange);
+}
+
+.kz-hero-badge-text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--kz-orange);
+}
+
+.kz-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 4.4vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+  color: var(--kz-white);
+  margin: 0 0 12px;
+}
+
+.kz-hero-subtitle-en {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 22px;
+}
+
+.kz-hero-desc {
+  font-size: 18px;
+  line-height: 1.68;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 36px;
+  max-width: 520px;
+}
+
+.kz-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.kz-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--kz-teal-slate);
+  color: var(--kz-orange);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.kz-btn-primary:hover {
+  background-color: #607a7e;
+  transform: translateY(-2px);
+}
+
+.kz-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.kz-btn-outline:hover {
+  border-color: var(--kz-white);
+  color: var(--kz-white);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.kz-hero-visual {
+  position: relative;
+}
+
+.kz-hero-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 40px;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+/* 2. 4-COLUMN STATS BAR (#52696C) */
+.kz-stats-bar {
+  background-color: var(--kz-teal-slate);
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kz-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.kz-stat-item {
+  padding: 8px 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.kz-stat-item:last-child {
+  border-right: none;
+}
+
+.kz-stat-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--kz-white);
+  margin-bottom: 6px;
+}
+
+.kz-stat-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* SECTION COMMON HEADINGS */
+.kz-section {
+  padding: 96px 0;
+}
+
+.kz-section-white {
+  background-color: var(--kz-white);
+}
+
+.kz-section-mint {
+  background-color: var(--kz-mint-bg);
+}
+
+.kz-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--kz-teal-slate);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.kz-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: var(--kz-slate-dark);
+  margin: 0 0 18px;
+}
+
+.kz-section-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--kz-slate-muted);
+  max-width: 640px;
+  margin: 0 0 48px;
+}
+
+/* 3. THE PLATFORM SECTION */
+.kz-platform-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.kz-platform-copy p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0 0 20px;
+}
+
+.kz-cities-box {
+  background-color: var(--kz-mint-bg);
+  border: 1px solid var(--kz-mint-border);
+  border-radius: 24px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.kz-cities-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--kz-teal-dark);
+  margin: 0 0 16px;
+}
+
+.kz-cities-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kz-city-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--kz-white);
+  border: 1px solid var(--kz-mint-border);
+  border-radius: 100px;
+  padding: 7px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--kz-teal-dark);
+}
+
+.kz-city-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--kz-teal-slate);
+}
+
+.kz-platform-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 14px 36px rgba(27, 47, 50, 0.1);
+  display: block;
+}
+
+/* 4. WHY KANTOORZOEKEN (4 CARDS) */
+.kz-reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.kz-reason-card {
+  background-color: var(--kz-white);
+  border: 1px solid var(--kz-mint-border);
+  border-radius: 24px;
+  padding: 36px 32px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kz-reason-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(27, 47, 50, 0.08);
+}
+
+.kz-reason-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: var(--kz-teal-dark);
+  color: var(--kz-orange);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.kz-reason-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--kz-slate-dark);
+  margin: 0 0 12px;
+}
+
+.kz-reason-card p {
+  font-size: 15px;
+  line-height: 1.68;
+  color: var(--kz-slate-muted);
+  margin: 0;
+}
+
+/* 5. PROCESS (4 STEPS) */
+.kz-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.kz-process-step {
+  background-color: var(--kz-mint-bg);
+  border: 1px solid var(--kz-mint-border);
+  border-radius: 22px;
+  padding: 30px 24px;
+  position: relative;
+}
+
+.kz-process-step-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--kz-teal-slate);
+  color: var(--kz-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.kz-process-step h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--kz-slate-dark);
+  margin: 0 0 10px;
+}
+
+.kz-process-step p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--kz-slate-muted);
+  margin: 0;
+}
+
+/* 6. PRICING (6 INCLUDED ITEMS GRID) */
+.kz-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.kz-pricing-card {
+  background-color: var(--kz-white);
+  border: 1px solid var(--kz-mint-border);
+  border-radius: 20px;
+  padding: 28px 26px;
+}
+
+.kz-pricing-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(82, 105, 108, 0.14);
+  color: var(--kz-teal-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.kz-pricing-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--kz-slate-dark);
+  margin: 0 0 8px;
+}
+
+.kz-pricing-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--kz-slate-muted);
+  margin: 0;
+}
+
+/* 7. TESTIMONIALS */
+.kz-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.kz-testimonial-card {
+  border-radius: 16px;
+  padding: 34px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kz-testimonial-card.kz-testimonial-dark {
+  background-color: var(--kz-teal-dark);
+  border: 1px solid var(--kz-teal-dark);
+  color: var(--kz-white);
+}
+
+.kz-testimonial-card.kz-testimonial-light {
+  background-color: var(--kz-mint-bg);
+  border: 1px solid var(--kz-mint-border);
+  color: var(--kz-slate-dark);
+}
+
+.kz-testimonial-quote-mark {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--kz-orange);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.kz-testimonial-quote {
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+
+.kz-testimonial-dark .kz-testimonial-quote {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.kz-testimonial-light .kz-testimonial-quote {
+  color: var(--kz-teal-dark);
+}
+
+.kz-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.kz-testimonial-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.kz-testimonial-name {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+}
+
+.kz-testimonial-dark .kz-testimonial-name {
+  color: var(--kz-white);
+}
+
+.kz-testimonial-light .kz-testimonial-name {
+  color: var(--kz-slate-dark);
+}
+
+.kz-testimonial-role {
+  font-size: 13px;
+  margin: 2px 0 0;
+}
+
+.kz-testimonial-dark .kz-testimonial-role {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.kz-testimonial-light .kz-testimonial-role {
+  color: var(--kz-slate-muted);
+}
+
+/* 8. FAQ ACCORDION */
+.kz-faq-list {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kz-faq-item {
+  background-color: var(--kz-white);
+  border: 1px solid var(--kz-mint-border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.kz-faq-item.open {
+  border-color: var(--kz-teal-slate);
+}
+
+.kz-faq-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kz-slate-dark);
+  cursor: pointer;
+}
+
+.kz-faq-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--kz-mint-bg);
+  color: var(--kz-teal-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.kz-faq-item.open .kz-faq-icon {
+  transform: rotate(180deg);
+  background-color: var(--kz-teal-dark);
+  color: var(--kz-orange);
+}
+
+.kz-faq-body {
+  padding: 0 26px 24px;
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--kz-slate-muted);
+}
+
+/* 9. OUR ROLE (2-COLUMN SPLIT: LEFT INTRO + RIGHT STACKED NUMBERED ITEMS) */
+.kz-role-split {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.kz-role-intro .kz-section-title {
+  font-size: clamp(1.85rem, 2.8vw, 2.35rem);
+  line-height: 1.25;
+  color: var(--kz-teal-darker);
+  margin-bottom: 18px;
+}
+
+.kz-role-intro p {
+  font-size: 16px;
+  line-height: 1.72;
+  color: #6B8588;
+  margin: 0;
+}
+
+.kz-role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kz-role-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.kz-role-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.kz-role-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--kz-teal-slate);
+  line-height: 1.5;
+  flex-shrink: 0;
+  min-width: 28px;
+  padding-top: 2px;
+}
+
+.kz-role-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--kz-slate-dark);
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.kz-role-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--kz-slate-muted);
+  margin: 0;
+}
+
+/* 10. CTA BANNER (#1B2F32) */
+.kz-cta-banner {
+  background-color: var(--kz-teal-darker);
+  color: var(--kz-white);
+  padding: 88px 0;
+  text-align: center;
+}
+
+.kz-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.kz-cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1px;
+  color: var(--kz-white);
+  margin: 0 0 10px;
+}
+
+.kz-cta-subtitle-en {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--kz-orange);
+  margin: 0 0 18px;
+}
+
+.kz-cta-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 32px;
+}
+
+.kz-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.kz-cta-address {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+/* 11. OTHER PROJECTS GRID */
+.kz-other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.kz-other-card {
+  background-color: var(--kz-white);
+  border: 1px solid var(--kz-border-subtle);
+  border-radius: 18px;
+  padding: 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kz-other-card:hover {
+  border-color: var(--kz-teal-slate);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(27, 47, 50, 0.08);
+}
+
+.kz-other-card-cat {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--kz-teal-slate);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.kz-other-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--kz-slate-dark);
+  margin: 0 0 8px;
+}
+
+.kz-other-card p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--kz-slate-muted);
+  margin: 0 0 16px;
+}
+
+.kz-other-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--kz-teal-dark);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .kz-hero-grid,
+  .kz-platform-grid,
+  .kz-reasons-grid,
+  .kz-testimonials-grid,
+  .kz-role-split {
+    grid-template-columns: 1fr;
+  }
+
+  .kz-stats-grid,
+  .kz-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kz-stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .kz-pricing-grid,
+  .kz-other-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .kz-stats-grid,
+  .kz-process-grid,
+  .kz-pricing-grid,
+  .kz-other-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kz-stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 16px;
+  }
+
+  .kz-stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .kz-hero-img {
+    height: 300px;
+    border-radius: 24px;
+  }
+}
+
