@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { assetUrl } from '../utils/assetUrl';
 import { 
   ArrowUpRight, 
   ArrowLeft, 
@@ -367,7 +368,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
             {/* Featured Article Cover Image */}
             <div className="article-reader-cover-wrap">
               <img
-                src={selectedArticle.image}
+                src={assetUrl(selectedArticle.image)}
                 alt={selectedArticle.title}
                 className="article-reader-cover-img"
               />
@@ -516,7 +517,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
             >
               <div className="article-spotlight-visual">
                 <img
-                  src={featuredArticle.image}
+                  src={assetUrl(featuredArticle.image)}
                   alt={featuredArticle.title}
                   className="article-spotlight-img"
                 />
@@ -550,7 +551,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
                 <div className="article-spotlight-footer">
                   <div className="article-author-info">
                     <img 
-                      src="/sergio-standing.png" 
+                      src={assetUrl('/sergio-standing.png')} 
                       alt="Sergio van Dijk" 
                       className="article-author-avatar"
                     />
@@ -604,7 +605,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
                 >
                   <div className="article-card-thumb-wrap">
                     <img
-                      src={art.image}
+                      src={assetUrl(art.image)}
                       alt={art.title}
                       className="article-card-thumb"
                       loading="lazy"
@@ -697,7 +698,7 @@ export default function PageArticle({ onOpenInquiryModal }) {
                 >
                   <div className="article-magazine-thumb-wrap">
                     <img
-                      src={article.image}
+                      src={assetUrl(article.image)}
                       alt={article.title}
                       className="article-magazine-thumb"
                       loading="lazy"

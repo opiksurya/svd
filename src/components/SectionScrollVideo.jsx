@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function SectionScrollVideo({
   onNextClick,
@@ -89,7 +90,7 @@ export default function SectionScrollVideo({
         <video
           ref={videoRef}
           className="pre-footer-video-element"
-          src="/vid2.mp4?v=2"
+          src={assetUrl('/vid2.mp4?v=2')}
           playsInline
           muted
           preload="auto"

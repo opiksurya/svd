@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../utils/assetUrl';
 import { 
   ArrowUpRight, 
   ArrowRight, 
@@ -201,7 +202,7 @@ export default function PageAbout({ onSelectPage, onOpenInquiryModal }) {
             {/* Editorial Portrait Frame */}
             <div className="page-portrait-frame">
               <img
-                src="/sergio-standing.png"
+                src={assetUrl('/sergio-standing.png')}
                 alt="Sergio van Dijk Portrait"
                 className="page-portrait-img"
               />
@@ -416,7 +417,7 @@ export default function PageAbout({ onSelectPage, onOpenInquiryModal }) {
               </p>
             </div>
             <div className="page-about-philosophy-image">
-              <img src="/sergio-seated.png" alt="Sergio van Dijk Seated" />
+              <img src={assetUrl('/sergio-seated.png')} alt="Sergio van Dijk Seated" />
             </div>
           </div>
         </div>

@@ -1,12 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { assetUrl } from '../utils/assetUrl';
 
 const MARQUEE_LOGOS = [
-  { id: 'consentarch', name: 'ConsentArch', src: '/logos/consentarch.png' },
-  { id: 'drankshop', name: 'Drankshop', src: '/logos/drankshop.png' },
-  { id: 'kantoorzoeken', name: 'Kantoorzoeken.nl', src: '/logos/kantoorzoeken.png' },
-  { id: 'bictrl', name: 'BICTRL Tech', src: '/logos/bictrl.png' },
-  { id: 'indovest', name: 'Indovest', src: '/logos/indovest.png' }
+  { id: 'consentarch', name: 'ConsentArch', src: assetUrl('/logos/consentarch.png') },
+  { id: 'drankshop', name: 'Drankshop', src: assetUrl('/logos/drankshop.png') },
+  { id: 'kantoorzoeken', name: 'Kantoorzoeken.nl', src: assetUrl('/logos/kantoorzoeken.png') },
+  { id: 'bictrl', name: 'BICTRL Tech', src: assetUrl('/logos/bictrl.png') },
+  { id: 'indovest', name: 'Indovest', src: assetUrl('/logos/indovest.png') }
 ];
 
 export default function SectionVelocityOverlap({

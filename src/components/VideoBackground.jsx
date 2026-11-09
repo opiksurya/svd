@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function VideoBackground({
   overlayTheme = 'cinematic', // 'cinematic' | 'studio' | 'dark'
@@ -136,7 +137,7 @@ export default function VideoBackground({
       <video
         ref={videoRef}
         className="video-bg-element"
-        src="/vid.mp4"
+        src={assetUrl('/vid.mp4')}
         playsInline
         muted={isMuted}
         preload="auto"

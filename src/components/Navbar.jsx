@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { assetUrl } from '../utils/assetUrl';
 import {
   Globe,
   Check,
@@ -187,7 +188,7 @@ export default function Navbar({
           title="Sergio van Dijk — Home"
         >
           <img
-            src="/logo.png"
+            src={assetUrl('/logo.png')}
             alt="sergiovandijk.com"
             className="navbar-logo-img"
           />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { assetUrl } from './utils/assetUrl';
 import Navbar from './components/Navbar';
 import VideoBackground from './components/VideoBackground';
 import SectionHero from './components/SectionHero';
@@ -200,7 +201,7 @@ export default function App() {
             <div className="dedicated-footer-top">
               <div>
                 <img
-                  src="/logo.png"
+                  src={assetUrl('/logo.png')}
                   alt="sergiovandijk.com"
                   className="navbar-logo-img"
                   style={{ height: '26px', width: 'auto', marginBottom: '0.75rem' }}
